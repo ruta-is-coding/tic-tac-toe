@@ -1,0 +1,75 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.game-board {
+  margin-right: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border: 1px solid #999;
+  font-size: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+.square:focus {
+  background: #ddd;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.game-info > :first-child {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.game-info ol{
+  list-style-type: none;
+}
+
+.game-info ol li{
+  margin-bottom: 13px;
+}
+
+.game ol li button{
+  width: 100%;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game ol li button:hover{
+  background: linear-gradient(135deg, #a777e3, #6e8efb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
