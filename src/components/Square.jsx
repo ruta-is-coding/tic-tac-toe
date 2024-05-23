@@ -1,9 +1,9 @@
 // src/components/Square.js
 import React from 'react';
 
-const Square = ({ value, onClick }) => {
+const Square = ({ value, onClick, index }) => {
     return (
-        <button className="square" onClick={onClick}>
+        <button className="square" onClick={onClick} data-cy={`square-${index}`}>
             {value}
         </button>
     );

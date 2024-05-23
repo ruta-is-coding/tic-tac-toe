@@ -58,7 +58,7 @@ const Game = () => {
         return history.map((_, move) => {
             const desc = move ? `Go to move #${move}` : 'Go to game start';
             return (
-                <li key={move}>
+                <li key={move} data-cy='move'>
                     <button onClick={() => jumpTo(move)}>{desc}</button>
                 </li>
             );
@@ -70,7 +70,7 @@ const Game = () => {
             <div className="game-board">
                 <Board squares={current.squares} onClick={handleClick} />
             </div>
-            <div className="game-info">
+            <div className="game-info" data-cy='game-info'>
                 <div>{winner ? 'Winner: ' + winner : 'Next player: ' + (xIsNext ? 'X' : 'O')}</div>
                 <ol>{renderMoves()}</ol>
             </div>
